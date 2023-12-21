@@ -30,7 +30,7 @@ Gem::Specification.new do |s|
   s.add_development_dependency 'rdoc'
   s.add_development_dependency 'coveralls'
 
-  s.add_dependency 'chef',     '>= 16.1.0'
+  s.add_dependency 'chef',     '>= 16.18.30'
   s.add_dependency 'net-ssh',  '>= 7.0.0'
   s.add_dependency 'erubis',   '~> 2.7.0'
 end
