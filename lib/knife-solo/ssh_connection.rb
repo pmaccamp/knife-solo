@@ -39,7 +39,8 @@ module KnifeSolo
           gw_user,gw =  co.delete(:gateway).split '@'
           Net::SSH::Gateway.new(gw, gw_user).ssh(host, user, co, &block)
         else
-          Net::SSH.start(host, user, connection_options, &block, verbose: :debug)
+          connection_options[:verbose]=:debug
+          Net::SSH.start(host, user, connection_options, &block)
         end
       end
     end
